@@ -1,15 +1,11 @@
-import fetchNews from "../lib/fetchNews"
-import { categories } from "../constants"
+import fetchNews from '../lib/fetchNews';
+import { categories } from '../constants';
 
 async function HomePage() {
+  const news: NewsResponse = await fetchNews(categories.join(','));
+  // console.log(news);
 
-  const news:NewsResponse = await fetchNews(categories.join(','))
-
-  return (
-    <div>
-
-    </div>
-  )
+  return <div></div>;
 }
 
-export default HomePage
+export default HomePage;
