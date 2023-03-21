@@ -5,9 +5,11 @@ import response from '../response.json';
 
 async function HomePage() {
   const news: NewsResponse =
-    // response || 
-    (await fetchNews(categories.join(',')));
+    // response ||
+    await fetchNews(categories.join(','));
   // console.log(news);
+
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return (
     <div>
