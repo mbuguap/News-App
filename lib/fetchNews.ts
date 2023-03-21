@@ -17,7 +17,7 @@ const fetchNews = async (
         categories: $categories
         countries: "ca,fr,us,gb"
         sort: "published_desc"
-        limit: "3"
+        limit: "100"
         keywords: $keywords
       ) {
         data {
@@ -62,7 +62,7 @@ const fetchNews = async (
     }
   );
 
-  console.log('LOADING NEW DATA FROM API for category >>>', category, keywords);
+  // console.log('LOADING NEW DATA FROM API for category >>>', category, keywords);
 
   const newsResponse = await res.json();
 
